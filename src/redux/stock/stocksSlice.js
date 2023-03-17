@@ -1,12 +1,12 @@
 const { createSlice, createAsyncThunk } = require('@reduxjs/toolkit');
 
 const APIKEY = '5f2391e8b083f36ed9393adfab96e39f';
-const URL = `https://financialmodelingprep.com/api/v3/quotes/nyse?apikey=${APIKEY}`;
+const URL = `https://financialmodelingprep.com/api/v3/quotes/?apikey=${APIKEY}`;
 
 export const getStocks = createAsyncThunk('stock/getStocks', async () => {
   const data = await fetch(URL);
   const res = await data.json();
-  return res;
+  return res.filter((item, index) => index <= 100);
 });
 
 const StockSlice = createSlice({
