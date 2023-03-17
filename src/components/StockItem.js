@@ -1,5 +1,5 @@
 import { PropTypes } from 'prop-types';
-import styles from 'styles/Home.module.css';
+import styles from 'styles/StockItem.module.css';
 
 const StockItem = ({ name, price }) => (
   <div className={styles.item}>
