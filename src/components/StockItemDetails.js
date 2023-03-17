@@ -1,19 +1,17 @@
 import { PropTypes } from 'prop-types';
 import styles from 'styles/StockItem.module.css';
 
-const StockItemDetails = ({ data }) => (
-  <div className={styles.item}>
-    <h2>{data.name}</h2>
-    <hr/>
-  </div>
+const StockItemDetails = ({ name, value }) => (
+  <li className={styles.item}>
+    <h2>{name}</h2>
+    <h3>{value}</h3>
+    <hr />
+  </li>
 );
 
 StockItemDetails.propTypes = {
-  data: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
-  }
-  ).isRequired
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
 };
 
 export default StockItemDetails;

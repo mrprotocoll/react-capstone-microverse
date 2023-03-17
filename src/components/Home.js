@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 import StockItem from './StockItem';
 
 const Home = () => {
-  const stocks = useSelector((store) => store.stocks);
+  const { stocks } = useSelector((store) => store.stock);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getStocks());
@@ -17,9 +17,8 @@ const Home = () => {
       <Navbar />
       <div className={styles.items}>
         {
-          stocks.map((item) => <StockItem key={item.symbol} name={item.name} price={item.price} />)
+          stocks.map((item) => <StockItem key={item.symbol} data={item} />)
         }
-
       </div>
     </div>
   );
