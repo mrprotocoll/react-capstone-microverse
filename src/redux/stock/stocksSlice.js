@@ -1,7 +1,5 @@
 const { createSlice, createAsyncThunk } = require('@reduxjs/toolkit');
 
-// const symbols = ['AAPL', 'MSFT', 'AMZN', 'TSLA', 'GOOGL', 'NVDA', 'META', 'UNA', 'FB', 'A', 'AA'];
-
 const APIKEY = '5f2391e8b083f36ed9393adfab96e39f';
 const URL = `https://financialmodelingprep.com/api/v3/quotes/nyse?apikey=${APIKEY}`;
 
@@ -16,7 +14,7 @@ const StockSlice = createSlice({
   initialState: [],
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getStocks.fulfilled, (state) => state);
+    builder.addCase(getStocks.fulfilled, (state, { payload }) => payload);
   },
 });
 
