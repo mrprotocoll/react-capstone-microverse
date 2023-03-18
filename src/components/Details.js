@@ -16,6 +16,7 @@ const Details = () => {
   }, [dispatch, id]);
   return (
     <div className="container">
+      <h2 className={styles.name}>{details.name}</h2>
       <ul className={styles.details}>
         <StockItemDetails name="Symbol" value={details.symbol} />
         <StockItemDetails name="Previous close" value={price(details.previousClose)} />
