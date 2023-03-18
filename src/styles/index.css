@@ -42,14 +42,15 @@ a {
 
 .btn {
   border-radius: 3px;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   color: #fff;
   font-family: 'Roboto Slab', sans-serif;
   font-size: 0.813rem;
   font-weight: 300;
-  border: 0;
-  padding: 10px 25px;
+  border: 1px solid var(--secondary);
+  padding: 10px 15px;
   cursor: pointer;
+  height: 2.5rem;
 }
 
 input {
@@ -58,7 +59,7 @@ input {
   border-radius: 4px;
   border: 1px solid #e8e8e8;
   height: 2.5rem;
-  width:90%;
+  width:80%;
   box-sizing: border-box;
 }
 
@@ -74,4 +75,10 @@ input::placeholder {
   font-weight: normal;
   letter-spacing: -0.15px;
   color: #c4c4c4;
+}
+
+.notfound {
+  text-align: center;
+  padding: 20px;
+  color: var(--primary);
 }
