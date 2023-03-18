@@ -8,8 +8,8 @@ const StockItem = ({ data }) => (
     <Link className={styles.item} to={`/details/${data.symbol}`}>
       <div className={styles.arrow}><FaArrowRight /></div>
       <div>
-        <h2>{data.name}</h2>
-        <small>{data.symbol}</small>
+        <h2>{data.symbol}</h2>
+        <small>{data.name}</small>
         <h3>
           $
           {data.price}

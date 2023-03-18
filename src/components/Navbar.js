@@ -6,7 +6,7 @@ const Navbar = () => (
   <nav>
     <div className={`container ${styles.navbar}`}>
       <NavLink to="/" className={styles.back}><FaArrowLeft /></NavLink>
-      <h1>US Stock Exchange</h1>
+      <h1>Stock Price</h1>
       <div className={styles.user}>
         <FaCog />
       </div>

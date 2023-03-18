@@ -1,17 +1,18 @@
 const { createSlice, createAsyncThunk } = require('@reduxjs/toolkit');
 
 const APIKEY = '5f2391e8b083f36ed9393adfab96e39f';
-const URL = `https://financialmodelingprep.com/api/v3/stock/list?apikey=${APIKEY}`;
+const URL = `https://financialmodelingprep.com/api/v3/stock/list?limit=120&apikey=${APIKEY}`;
 
 const initialState = {
   stocks: [],
   details: {},
+  hero: {},
 };
 
 export const getStocks = createAsyncThunk('stock/getStocks', async () => {
   const data = await fetch(URL);
   const res = await data.json();
-  return res.filter((item, index) => index <= 100);
+  return res;
 });
 
 export const getStockDetails = createAsyncThunk('stock/getStockDetails', async (symbol) => {
@@ -27,7 +28,8 @@ const StockSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(getStocks.fulfilled, (state, { payload }) => {
-        state.stocks = payload;
+        state.stocks = payload.filter((item, index) => item.exchangeShortName === 'NASDAQ' && index <= 100);
+        state.hero = payload.filter((item) => item.symbol === 'AAPL');
       })
       .addCase(getStockDetails.fulfilled, (state, { payload }) => {
         state.details = payload;
