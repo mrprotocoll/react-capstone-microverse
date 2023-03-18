@@ -56,7 +56,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://mrprotocoll.github.io/react-capstone-microverse/)
+- [Live Demo Link](https://stock-price-app-46ci.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -65,7 +65,7 @@
 
 > Link to Project Presentation.
 
-- [Loom Walkthrough Link](https://www.loom.com/share/1656210cf90147c7965e1e62a5e00273)
+- [Loom Walkthrough Link](https://www.loom.com/share/5cb3594b1e124c74b2ac773729208e8e)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
