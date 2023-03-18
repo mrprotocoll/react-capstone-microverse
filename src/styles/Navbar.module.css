@@ -1,5 +1,5 @@
 nav {
-  background-color:  var(--primary);;
+  background-color: var(--primary);
   font-family: Montserrat, sans-serif;
   margin: 0;
 }
@@ -13,7 +13,7 @@ nav {
 }
 
 .navbar .back {
-  color: #ffffff;
+  color: #fff;
 }
 
 .navbar .user {
@@ -22,12 +22,12 @@ nav {
   text-align: center;
   padding: 0.875rem;
   border-radius: 50%;
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
 }
 
 .navbar h1 {
-  color: #ffffff;
+  color: #fff;
   font-size: 20px;
 }
 
