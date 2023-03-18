@@ -9,7 +9,8 @@ nav {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding-left: 10px;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
 .navbar .back {
@@ -17,13 +18,17 @@ nav {
 }
 
 .navbar .user {
-  width: 1.2rem;
-  height: 1.2rem;
+  display: flex;
   text-align: center;
   padding: 0.875rem;
   border-radius: 50%;
   color: #fff;
   cursor: pointer;
+}
+
+.navbar svg {
+  padding: 5px;
+  font-size: 20px;
 }
 
 .navbar h1 {
@@ -44,8 +49,4 @@ nav {
     font-size: 13px;
   }
 
-  .navbar .user {
-    width: 1rem;
-    height: 1rem;
-  }
 }

@@ -53,12 +53,19 @@ a {
 }
 
 input {
-  font-family: Montserrat, sans-serif;
+  font-family: Lato, sans-serif;
   padding: 10px;
   border-radius: 4px;
-  box-shadow: 0 0 60px 0 var(--black-5);
   border: 1px solid #e8e8e8;
-  height: 1.5rem;
+  height: 2.5rem;
+  width:90%;
+  box-sizing: border-box;
+}
+
+.search {
+  background-color: var(--primary);
+  padding: 10px;
+  text-align: center;
 }
 
 input::placeholder {

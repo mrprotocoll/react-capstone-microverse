@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getStockDetails } from 'redux/stock/stocksSlice';
 import styles from 'styles/Details.module.css';
+import Navbar from './Navbar';
 import StockItemDetails from './StockItemDetails';
 
 const Details = () => {
@@ -16,6 +17,7 @@ const Details = () => {
   }, [dispatch, id]);
   return (
     <div className="container">
+      <Navbar />
       <h2 className={styles.name}>{details.name}</h2>
       <ul className={styles.details}>
         <StockItemDetails name="Symbol" value={details.symbol} />

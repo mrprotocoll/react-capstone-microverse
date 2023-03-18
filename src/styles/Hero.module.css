@@ -21,7 +21,7 @@
 .hero .content {
   text-align: right;
   color: var(--white);
-  padding: 50px;
+  padding: 25px;
   z-index: 999;
 }
 
