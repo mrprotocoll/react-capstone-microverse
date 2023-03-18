@@ -1,18 +1,18 @@
 const { render } = require('@testing-library/react');
-const { default: Navbar } = require('components/Navbar');
+const { default: Details } = require('components/Details');
 const { Provider } = require('react-redux');
 const { BrowserRouter } = require('react-router-dom');
 const { default: store } = require('redux/store');
 
-describe('Navbar Component', () => {
+describe('Details route Component', () => {
   test('component match the snapshot', () => {
-    const navbar = render(
+    const details = render(
       <Provider store={store}>
         <BrowserRouter>
-          <Navbar />
+          <Details />
         </BrowserRouter>
       </Provider>,
     );
-    expect(navbar).toMatchSnapshot();
+    expect(details).toMatchSnapshot();
   });
 });

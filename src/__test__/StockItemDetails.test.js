@@ -1,18 +1,23 @@
 const { render } = require('@testing-library/react');
-const { default: Navbar } = require('components/Navbar');
+const { default: StockItemDetails } = require('components/StockItemDetails');
 const { Provider } = require('react-redux');
 const { BrowserRouter } = require('react-router-dom');
 const { default: store } = require('redux/store');
 
-describe('Navbar Component', () => {
+describe('Stock item Details Component', () => {
   test('component match the snapshot', () => {
-    const navbar = render(
+    const data = {
+      name: "Apple",
+      symbol: "APPL",
+      price: "25"
+    }
+    const itemDetails = render(
       <Provider store={store}>
         <BrowserRouter>
-          <Navbar />
+          <StockItemDetails name={data.name} value={data.price} />
         </BrowserRouter>
       </Provider>,
     );
-    expect(navbar).toMatchSnapshot();
+    expect(itemDetails).toMatchSnapshot();
   });
 });
