@@ -1,28 +1,18 @@
 import { PropTypes } from 'prop-types';
 import { FaArrowRight } from 'react-icons/fa';
-import { useDispatch } from 'react-redux';
-import { getStockDetails } from 'redux/stock/stocksSlice';
+import { Link } from 'react-router-dom';
 import styles from 'styles/StockItem.module.css';
 
-const StockItem = ({ data }) => {
-  const dispatch = useDispatch();
-  const getDetails = (e) => {
-    e.preventDefault();
-    dispatch(getStockDetails(data.symbol));
-    window.location = './details';
-  };
-
-  return (
-    <div className={styles.item}>
-      <button type="button" aria-label={data.name} onClick={getDetails}><FaArrowRight /></button>
-      <h2>{data.name}</h2>
-      <h3>
-        $
-        {data.price}
-      </h3>
-    </div>
-  );
-};
+const StockItem = ({ data }) => (
+  <div className={styles.item}>
+    <Link to={`/details/${data.symbol}`} className=""><FaArrowRight /></Link>
+    <h2>{data.name}</h2>
+    <h3>
+      $
+      {data.price}
+    </h3>
+  </div>
+);
 
 StockItem.propTypes = {
   data: PropTypes.shape({

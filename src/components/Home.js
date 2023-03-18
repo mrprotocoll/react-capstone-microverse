@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getStocks } from 'redux/stock/stocksSlice';
 import styles from 'styles/Home.module.css';
-import Navbar from './Navbar';
 import StockItem from './StockItem';
 
 const Home = () => {
@@ -14,10 +13,9 @@ const Home = () => {
 
   return (
     <div className="container">
-      <Navbar />
       <div className={styles.items}>
         {
-          stocks.map((item) => <StockItem key={item.symbol} data={item} />)
+          stocks.map((stock) => <StockItem key={stock.symbol} data={stock} />)
         }
       </div>
     </div>
