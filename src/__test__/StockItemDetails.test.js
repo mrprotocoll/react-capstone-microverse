@@ -7,10 +7,10 @@ const { default: store } = require('redux/store');
 describe('Stock item Details Component', () => {
   test('component match the snapshot', () => {
     const data = {
-      name: "Apple",
-      symbol: "APPL",
-      price: "25"
-    }
+      name: 'Apple',
+      symbol: 'APPL',
+      price: '25',
+    };
     const itemDetails = render(
       <Provider store={store}>
         <BrowserRouter>
