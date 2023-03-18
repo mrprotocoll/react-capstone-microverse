@@ -4,14 +4,19 @@ import { Link } from 'react-router-dom';
 import styles from 'styles/StockItem.module.css';
 
 const StockItem = ({ data }) => (
-  <div className={styles.item}>
-    <Link to={`/details/${data.symbol}`} className=""><FaArrowRight /></Link>
-    <h2>{data.name}</h2>
-    <h3>
-      $
-      {data.price}
-    </h3>
-  </div>
+  <li>
+    <Link className={styles.item} to={`/details/${data.symbol}`}>
+      <div className={styles.arrow}><FaArrowRight /></div>
+      <div>
+        <h2>{data.name}</h2>
+        <small>{data.symbol}</small>
+        <h3>
+          $
+          {data.price}
+        </h3>
+      </div>
+    </Link>
+  </li>
 );
 
 StockItem.propTypes = {

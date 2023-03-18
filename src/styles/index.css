@@ -1,6 +1,7 @@
 :root {
-    --primary: #0290ff;
+    --primary: #023fb1;
     --white: #fff;
+    --secondary: rgb(43, 95, 199);
   }
   
   body {
@@ -18,16 +19,24 @@
     list-style-type: none;
     margin: 0;
   }
+
+  li {
+    list-style-type: none;
+  }
   
   p {
     color: rgb(59, 59, 59);
   }
   
+  a {
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+  }
+
   .container {
     box-sizing: border-box;
     max-width: 1067px;
-    padding-left: 20px;
-    padding-right: 20px;
     margin: 0 auto;
   }
   
@@ -59,20 +68,3 @@
     letter-spacing: -0.15px;
     color: #c4c4c4;
   }
-  
-  .CircularProgressbar-path {
-    stroke: #379cf6;
-  }
-  
-  .CircularProgressbar-trail {
-    stroke: #e8e8e8;
-  }
-  
-  .CircularProgressbar-text {
-    fill: #379cf6;
-  }
-  
-  .CircularProgressbar-background {
-    fill: #fff;
-  }
-  

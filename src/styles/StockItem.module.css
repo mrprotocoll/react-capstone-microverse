@@ -1,4 +1,23 @@
-.items {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: right;
+    min-height: 200px;
+    background-color: transparent !important;
+}
+
+.item .arrow {
+    color: var(--white);
+    background-color: transparent !important;
+}
+
+.item h2 {
+    font-size: 1.5rem;
+}
+
+.item h3 {
+    margin: 0;
+    font-size: 15px;
 }

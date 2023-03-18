@@ -7,17 +7,21 @@ import StockItemDetails from './StockItemDetails';
 
 const Details = () => {
   const { details } = useSelector((store) => store.stock);
-  const symbol = useParams();
-  console.log(symbol);
+  const { id } = useParams();
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getStockDetails(symbol));
-  }, [dispatch, symbol]);
+    dispatch(getStockDetails(id));
+  }, [dispatch, id]);
   return (
     <div className="container">
       <ul className={styles.details}>
         <StockItemDetails key={details.symbol} name="Name" value={details.name} />
+        <StockItemDetails key={details.symbol} name="Previous close" value={details.previousClose} />
+        <StockItemDetails key={details.symbol} name="Price" value={details.price} />
+        <StockItemDetails key={details.symbol} name="Exchange" value={details.exchange} />
+        <StockItemDetails key={details.symbol} name="Year High" value={details.yearHigh} />
+        <StockItemDetails key={details.symbol} name="Year Low" value={details.yearLow} />
       </ul>
     </div>
   );

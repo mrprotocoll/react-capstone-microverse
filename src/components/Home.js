@@ -7,17 +7,18 @@ import StockItem from './StockItem';
 const Home = () => {
   const { stocks } = useSelector((store) => store.stock);
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getStocks());
   }, [dispatch]);
 
   return (
     <div className="container">
-      <div className={styles.items}>
+      <ul className={styles.items}>
         {
           stocks.map((stock) => <StockItem key={stock.symbol} data={stock} />)
         }
-      </div>
+      </ul>
     </div>
   );
 };
