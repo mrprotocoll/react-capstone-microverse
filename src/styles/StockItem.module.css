@@ -1,0 +1,28 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: right;
+  min-height: 200px;
+  background-color: transparent !important;
+}
+
+.item .arrow {
+  color: var(--white);
+  background-color: transparent !important;
+}
+
+.item h2 {
+  font-size: 1.5rem;
+}
+
+.item small {
+  font-size: 16px;
+}
+
+.item h3 {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 15px;
+}

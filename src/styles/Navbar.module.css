@@ -1,0 +1,51 @@
+nav {
+  background-color: var(--primary);
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.navbar .back {
+  color: #fff;
+}
+
+.navbar .user {
+  display: flex;
+  text-align: center;
+  padding: 0.875rem;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+}
+
+.navbar svg {
+  padding: 5px;
+  font-size: 20px;
+}
+
+.navbar h1 {
+  color: #fff;
+  font-size: 20px;
+}
+
+@media (max-width: 756px) {
+  .navlinks h2 {
+    font-size: 1.2rem;
+  }
+
+  .navlinks li {
+    padding: 8px 10px;
+  }
+
+  .navlinks a {
+    font-size: 13px;
+  }
+}

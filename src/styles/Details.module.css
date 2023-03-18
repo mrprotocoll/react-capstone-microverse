@@ -1,0 +1,36 @@
+.name {
+  font-size: 20px;
+  background-color: var(--secondary);
+  margin: 0;
+  padding: 20px;
+  color: var(--white);
+  text-align: center;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: var(--white);
+}
+
+.details li {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details h2 {
+  font-size: 20px;
+}
+
+.details h3 {
+  font-size: 16px;
+}
+
+.details li:nth-child(odd) {
+  background-color: var(--primary);
+}
+
+.details li:nth-child(even) {
+  background-color: var(--secondary);
+}

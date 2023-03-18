@@ -1,0 +1,19 @@
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: var(--white);
+}
+
+.items li:nth-child(odd) {
+  background-color: var(--secondary);
+}
+
+.items li:nth-of-type(4n),
+.items li:nth-of-type(4n+3) {
+  background-color: var(--secondary);
+}
+
+.items li:nth-of-type(4n+3),
+.items li:nth-of-type(4n+2) {
+  background-color: var(--primary);
+}
