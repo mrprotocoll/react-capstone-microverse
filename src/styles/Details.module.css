@@ -1,17 +1,19 @@
 .details {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     color: var(--white);
 }
 
-.items li:nth-child(odd) {
+.details li {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.details li:nth-child(odd) {
     background-color: var(--secondary);
 }
 
-.items li:nth-of-type(4n), .items li:nth-of-type(4n+3) {
-    background-color: var(--secondary);
-}
-
-.items li:nth-of-type(4n+3), .items li:nth-of-type(4n+2)  {
+.details li:nth-child(even) {
     background-color: var(--primary);
 }

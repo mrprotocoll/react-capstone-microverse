@@ -1,11 +1,9 @@
 import { PropTypes } from 'prop-types';
-import styles from 'styles/StockItem.module.css';
 
 const StockItemDetails = ({ name, value }) => (
-  <li className={styles.item}>
+  <li>
     <h2>{name}</h2>
     <h3>{value}</h3>
-    <hr />
   </li>
 );
 
