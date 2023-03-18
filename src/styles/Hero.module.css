@@ -1,0 +1,41 @@
+.hero {
+    background-image: url("../../public/banner.jpg");
+    height: 250px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero .overlay {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(8, 52, 141, 0.8);
+    height: 100%
+}
+
+.hero .content {
+    text-align: right;
+    color: var(--white);
+    padding: 50px;
+    z-index: 999;
+}
+
+.hero h2 {
+    margin-bottom: 0;
+    font-size: 2.5rem;
+}
+
+.hero small {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.hero h3 {
+    font-size: 1.5rem;
+}
+   

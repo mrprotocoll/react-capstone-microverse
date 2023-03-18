@@ -29,7 +29,8 @@ const StockSlice = createSlice({
     builder
       .addCase(getStocks.fulfilled, (state, { payload }) => {
         state.stocks = payload.filter((item, index) => item.exchangeShortName === 'NASDAQ' && index <= 100);
-        state.hero = payload.filter((item) => item.symbol === 'AAPL');
+        const [hero] = payload.filter((item) => item.symbol === 'AAPL');
+        state.hero = hero;
       })
       .addCase(getStockDetails.fulfilled, (state, { payload }) => {
         state.details = payload;

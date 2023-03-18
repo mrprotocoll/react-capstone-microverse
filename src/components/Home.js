@@ -1,8 +1,8 @@
-import { price } from 'hof/format';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getStocks } from 'redux/stock/stocksSlice';
 import styles from 'styles/Home.module.css';
+import Hero from './Hero';
 import StockItem from './StockItem';
 
 const Home = () => {
@@ -14,14 +14,7 @@ const Home = () => {
 
   return (
     <div className="container">
-      <div className={styles.hero}>
-        <div className={styles.overlay} />
-        <div className={styles.content}>
-          <h2>{hero[0].name}</h2>
-          <small>{hero[0].symbol}</small>
-          <h3>{price(hero[0].price)}</h3>
-        </div>
-      </div>
+      <Hero data={hero} />
       <ul className={styles.items}>
         {
           stocks.map((stock) => <StockItem key={stock.symbol} data={stock} />)
